@@ -1,34 +1,64 @@
 # Supply Chain Guesser
 
-Supply Chain Guesser is a visual game about the hidden global journeys behind everyday objects. Identify the mystery object from its materials, value, production geography, trade routes, buyers and likely end-of-life destinations.
+**Can you identify an everyday object from the global journey behind it?**
+
+Supply Chain Guesser turns supply-chain evidence into a five-guess visual game. Each round starts with the object hidden and presents its material composition, estimated value, sourcing geography, production centers, logistics hubs, consumer markets, and likely end-of-life destinations. Every incorrect guess reveals a progressively clearer clue.
+
+**[Play the public version](https://mobius-production-7e17.up.railway.app/supply-chain-guess)** — no Möbius account required.
+
+![Supply Chain Guesser showing the mystery prompt, guess field, and material-composition chart](docs/images/supply-chain-guesser-gameplay.png)
+
+## Explore a product's global footprint
+
+The interactive map separates the main stages of a product's journey. Toggle raw materials, components, production, logistics, buyers, and waste independently; striped countries participate in more than one selected stage.
+
+![Interactive world map showing selected supply-chain stages](docs/images/supply-chain-guesser-map.png)
 
 ## How to play
 
-1. Everyone starts with the same object each UTC day. Study its rectangular charts and world map without revealing the answer.
-2. Type any everyday object as your guess.
-3. You have five guesses. Each wrong answer unlocks the next of four progressively more descriptive clues.
-4. Finish the round, then use **Play again** to continue through the remaining catalogue without changing the shared daily starting object.
-5. At the end, compare how many guesses you used and how many clues you revealed.
+1. Study the evidence without revealing the object.
+2. Enter any everyday object as your guess.
+3. Use the clue unlocked after each unsuccessful attempt.
+4. Identify the object within five guesses—or see the correct answer after the fifth miss.
+5. Read the finished product story to follow its journey from raw materials through manufacturing, trade, use, and end of life.
 
-The evidence includes:
+## What each round includes
 
 - material mass and estimated commodity value;
-- typical finished-product price range;
-- raw-material source countries and their associated inputs;
-- component or processing centers where relevant;
-- production, logistics, buyer and disposal countries; and
-- selectable map layers, including striped countries that play several roles.
+- a typical finished-product price range;
+- leading raw-material countries and their associated inputs;
+- component and processing centers where relevant;
+- production, logistics, buyer, and disposal geography;
+- selectable world-map layers with multi-role highlighting;
+- four fixed progressive clues;
+- tolerant matching for common names, synonyms, and minor spelling errors;
+- a concise post-answer manufacturing and global-journey explanation; and
+- a reputable learning link or *How It's Made* video where available.
 
-Country shares and product compositions are directional gameplay estimates, not traceable routes or bills of materials for a particular brand. Every panel includes an expandable data-limitations note.
-
-## Guess feedback
-
-Normal play is local and does not require an agent. Each object has extensive accepted names and synonyms, conservative typo handling and four fixed clues.
-
-After a locally rejected guess, signed-in Möbius users can optionally ask an AI reviewer to check whether the wording should count as a synonym, regional name, generic brand or matching subtype. The reviewer can overturn the local verdict or add comparison signals for category similarity, materials, portability, power, setting and mass. It is instructed not to reveal the hidden answer.
-
-The anonymous public version provides the fixed clues but cannot start the private AI reviewer.
+Signed-in Möbius players can optionally ask an AI reviewer to reconsider a rejected synonym or matching subtype. The player sees only the accept/reject verdict, never hidden comparison details. The public version uses the built-in matching and clue system without requiring an account.
 
 ## Included objects
 
-Smartphone, metal knife, office chair, glass bottle, office paper, ballpoint pen, beef, muesli/cereal, semi-hard cheese, packaged wheat bread, fluoride toothpaste, a cotton T-shirt, sneakers, a household window, bar soap, a mattress, a bath towel, a ceramic mug, a frying pan, a bed pillow, an electric kettle, a manual toothbrush, an LED light bulb, an umbrella, a backpack, an alkaline AA battery, a toilet-paper roll, a wooden pencil, over-ear headphones and a stainless-steel cooking pot.
+The current catalogue contains 30 independently playable objects:
+
+> Smartphone · metal knife · office chair · glass bottle · office paper · ballpoint pen · beef · breakfast cereal · semi-hard cheese · packaged wheat bread · fluoride toothpaste · cotton T-shirt · sneakers · household window · bar soap · mattress · bath towel · ceramic mug · frying pan · bed pillow · electric kettle · manual toothbrush · LED light bulb · umbrella · backpack · alkaline AA battery · toilet-paper roll · wooden pencil · over-ear headphones · stainless-steel cooking pot
+
+## Data approach
+
+The game combines product composition studies, commodity and trade statistics, industry references, and waste data into consistent round-level estimates. Country shares and material breakdowns are designed for comparison and learning—not as traceable supplier records for a particular brand or individual product.
+
+Every evidence panel includes a data-limitations note. The map shows stage roles rather than literal shipping paths, and percentages can combine different public datasets and reference years.
+
+## Run in Möbius
+
+This repository is a Möbius mini-app. Its entry point is `index.jsx`, with the app contract in `mobius.json`. The app is intentionally online-only because optional signed-in feedback uses a Möbius-hosted reviewer.
+
+To validate the source inside a Möbius instance:
+
+```bash
+python "$SCRIPTS_DIR/validate-app.py" /data/apps/supply-chain-guess
+```
+
+## Project status
+
+Supply Chain Guesser is an evolving educational prototype. The current public build contains 30 objects and intentionally omits speculative shipping-route overlays while those routes require stronger product-specific evidence.
