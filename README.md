@@ -37,12 +37,6 @@ The interactive map separates the main stages of a product's journey. Toggle raw
 
 Signed-in Möbius players can optionally ask an AI reviewer to reconsider a rejected synonym or matching subtype. The player sees only the accept/reject verdict, never hidden comparison details. The public version uses the built-in matching and clue system without requiring an account.
 
-## Included objects
-
-The current catalogue contains 30 independently playable objects:
-
-> Smartphone · metal knife · office chair · glass bottle · office paper · ballpoint pen · beef · breakfast cereal · semi-hard cheese · packaged wheat bread · fluoride toothpaste · cotton T-shirt · sneakers · household window · bar soap · mattress · bath towel · ceramic mug · frying pan · bed pillow · electric kettle · manual toothbrush · LED light bulb · umbrella · backpack · alkaline AA battery · toilet-paper roll · wooden pencil · over-ear headphones · stainless-steel cooking pot
-
 ## Data approach
 
 The game combines product composition studies, commodity and trade statistics, industry references, and waste data into consistent round-level estimates. Country shares and material breakdowns are designed for comparison and learning—not as traceable supplier records for a particular brand or individual product.
